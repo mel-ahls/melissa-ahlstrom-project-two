@@ -1,0 +1,40 @@
+.navBar {
+   padding: 20px 0;
+}
+
+.navBar p {
+   font-family: $secondaryFont;
+   color: $marigold;
+   font-size: 41.5px;
+}
+
+.navBar nav {
+   width: 33%;
+}
+
+.navBar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+      ul {
+      list-style: none;
+      display:flex;
+      justify-content: space-between;
+            a {
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;  
+            color: $iceBlue;
+            font-family: $primaryFont;
+         
+            &:hover {
+               color: $marigold;
+               font-weight: 400;
+               transition: .03;
+            }
+      }
+   }
+}
+
+
+

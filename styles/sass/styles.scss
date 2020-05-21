@@ -1,5 +1,42 @@
+@import 'setup';
+@import 'styleGuide';
+@import 'nav';
+
 .wrapper {
+   max-width: 1200px;
    width: 90%;
    margin: 0 auto;
 }
 
+header {
+   height: 75vh;
+   width: 100vw;
+   background-image: url(assets/home-image-1.jpg);
+   background-position: top center;
+   background-size: cover;
+   position: relative;
+}
+
+.welcome {
+   display: flex;
+   position: absolute;
+   bottom: -160px;
+   width: 1200px;
+      h1 {
+      font-family: $primaryFont;
+      color: $iceBlue;
+      font-weight: 400;
+      padding-left: 30px;
+      line-height:  60px;
+   }
+}
+
+span {
+   font-family: $secondaryFont;
+   font-size: 115px;
+   color: $marigold;
+}
+
+.adventure {
+   background: $camoGreen;
+}
