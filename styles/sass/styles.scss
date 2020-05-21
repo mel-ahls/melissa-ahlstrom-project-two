@@ -8,6 +8,53 @@
    margin: 0 auto;
 }
 
+.flex {
+   display: flex
+}
+
+h2 {
+   font-family: $secondaryFont;
+   color: $marigold;
+   font-size: 45px;
+}
+
+i ~ h2 {
+   font-size: 40px;
+}
+
+p {
+   font-family: $primaryFont;
+   color: $iceBlue;
+   font-size: 20px;
+   line-height: 132%;
+   letter-spacing: 2px;;
+}
+
+a {
+   text-decoration: none;
+}
+
+.button {
+   background: $mudGreen;
+   width: 30px;
+   color: $iceBlue;
+   padding: 10px 8px;
+   font-family: $secondaryFont;
+   color: white;
+   font-size: 20px;
+}
+
+.infoOne i,
+.infoTwo i {
+   background: $mudGreen;
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   padding: 10px;
+   font-size: 25px;
+   color: white;
+}
+
 header {
    height: 75vh;
    width: 100vw;
@@ -19,16 +66,20 @@ header {
 
 .welcome {
    display: flex;
-   position: absolute;
-   bottom: -160px;
-   width: 1200px;
+   position: relative;
+   bottom: -125px;
       h1 {
-      font-family: $primaryFont;
-      color: $iceBlue;
-      font-weight: 400;
-      padding-left: 30px;
-      line-height:  60px;
+         font-family: $primaryFont;
+         color: $iceBlue;
+         font-weight: 400;
+         padding-left: 30px;
+         padding-top: 15px;
+         line-height:  60px;
    }
+}
+
+.welcome img {
+   width: 40%;
 }
 
 span {
@@ -37,6 +88,28 @@ span {
    color: $marigold;
 }
 
-.adventure {
+.background {
    background: $camoGreen;
 }
+
+.adventure {
+   height: 550px;
+   padding-bottom: 70px;
+   justify-content: space-between;
+   align-items: flex-end;
+      .adText {
+         width: 55%;
+   }
+}
+   
+.adText p {
+   padding-bottom: 25px;
+}
+
+.adImg img {
+   width: 80%;
+   box-shadow: -14px 14px 0px 0px $mudGreen;
+}
+
+
+

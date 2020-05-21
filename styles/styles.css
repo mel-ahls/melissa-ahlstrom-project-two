@@ -245,6 +245,10 @@ p {
   padding: 0;
 }
 
+img {
+  width: 100%;
+}
+
 .navBar {
   padding: 20px 0;
 }
@@ -302,6 +306,55 @@ p {
   margin: 0 auto;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h2 {
+  font-family: "Dokdo", cursive;
+  color: #FFC600;
+  font-size: 45px;
+}
+
+i ~ h2 {
+  font-size: 40px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  color: #FAFFFE;
+  font-size: 20px;
+  line-height: 132%;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background: #555F02;
+  width: 30px;
+  color: #FAFFFE;
+  padding: 10px 8px;
+  font-family: "Dokdo", cursive;
+  color: white;
+  font-size: 20px;
+}
+
+.infoOne i,
+.infoTwo i {
+  background: #555F02;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 25px;
+  color: white;
+}
+
 header {
   height: 75vh;
   width: 100vw;
@@ -315,9 +368,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  bottom: -160px;
-  width: 1200px;
+  position: relative;
+  bottom: -125px;
 }
 
 .welcome h1 {
@@ -325,7 +377,12 @@ header {
   color: #FAFFFE;
   font-weight: 400;
   padding-left: 30px;
+  padding-top: 15px;
   line-height: 60px;
+}
+
+.welcome img {
+  width: 40%;
 }
 
 span {
@@ -334,6 +391,31 @@ span {
   color: #FFC600;
 }
 
-.adventure {
+.background {
   background: #1E140E;
+}
+
+.adventure {
+  height: 550px;
+  padding-bottom: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.adventure .adText {
+  width: 55%;
+}
+
+.adText p {
+  padding-bottom: 25px;
+}
+
+.adImg img {
+  width: 80%;
+  -webkit-box-shadow: -14px 14px 0px 0px #555F02;
+          box-shadow: -14px 14px 0px 0px #555F02;
 }
