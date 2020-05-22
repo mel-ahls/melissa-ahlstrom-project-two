@@ -12,6 +12,7 @@
    display: flex
 }
 
+// CONSISTENT STYLES
 h2 {
    font-family: $secondaryFont;
    color: $marigold;
@@ -41,11 +42,11 @@ a {
    padding: 10px 8px;
    font-family: $secondaryFont;
    color: white;
-   font-size: 20px;
+   font-size: 25px;
 }
+   
 
-.infoOne i,
-.infoTwo i {
+.icon {
    background: $mudGreen;
    height: 40px;
    width: 40px;
@@ -55,6 +56,16 @@ a {
    color: white;
 }
 
+// BACKGROUND COLOURS
+.camoBack {
+   background: $camoGreen;
+}
+
+.charcoalBack {
+   background: $charcoal;
+}
+
+// HEADER STYLES
 header {
    height: 75vh;
    width: 100vw;
@@ -65,21 +76,19 @@ header {
 }
 
 .welcome {
-   display: flex;
-   position: relative;
+   position: absolute;
    bottom: -125px;
-      h1 {
-         font-family: $primaryFont;
-         color: $iceBlue;
-         font-weight: 400;
-         padding-left: 30px;
-         padding-top: 15px;
-         line-height:  60px;
-   }
+   width: 40%;
 }
 
-.welcome img {
-   width: 40%;
+.heading {
+   font-family: $primaryFont;
+   color: $iceBlue;
+   font-weight: 400;
+   line-height: 60px;
+   position: absolute;
+   top: 35%;
+   left: 43%;
 }
 
 span {
@@ -88,28 +97,122 @@ span {
    color: $marigold;
 }
 
-.background {
-   background: $camoGreen;
-}
-
+// SECTION ONE STYLES
 .adventure {
    height: 550px;
    padding-bottom: 70px;
    justify-content: space-between;
    align-items: flex-end;
       .adText {
-         width: 55%;
+         width: 60%;
    }
 }
-   
-.adText p {
+
+// P FROM SECTION FOUR ADDED TO STAY WITH 1 RULE
+.adText p, .location p, .programs, p {
    padding-bottom: 25px;
 }
 
 .adImg img {
-   width: 80%;
+   width: 85%;
    box-shadow: -14px 14px 0px 0px $mudGreen;
 }
+
+// SECTION TWO STYLES
+.gallery {
+   padding: 70px 0;
+      img {
+         width: calc( (100% / 3) - 20px);
+         margin: 10px;
+   }
+}
+
+.gallery img:first-child {
+    margin-left: 0;
+      img:last-child {
+         margin-right: 0;
+    }
+}
+
+// SECTION THREE STYLES
+.info {
+   padding: 80px 0;
+      .icon {
+         position: absolute;
+         // margin-top: 40px;
+         // margin-left: -18px;
+         // LOOK AT THIS IN MORE DEPTH!
+   }
+}
+
+.home, .users, .file, .phone {
+   padding: 40px;
+   position: relative;
+}
+
+
+// SECTION FOUR STYLES 
+.charcoalBack {
+   position: relative;
+}
+
+.readImg1, .readImg2 {
+   width: 40%;
+   position: absolute;
+}
+
+.readImg1 {
+   left: 0;
+   top: -8%;
+   box-shadow: 14px 14px 0px 0px $marigold;
+}
+
+.readImg2 {
+   right: 0;
+   bottom: -8%;
+   box-shadow: -18px 18px 0px -5px $marigold;
+}
+
+.readMore {
+   justify-content: space-between;
+}
+
+.programs, .locations {
+   width: 40%;
+}
+
+.programs {
+   padding-top: 5%;
+   padding-bottom: 33%;
+}
+
+.locations {
+   padding-top: 33%;
+   padding-bottom: 5%;
+}
+
+// FOOTER STYLES
+.trials {
+   flex-direction: column;
+   align-items: center;
+   padding: 100px;
+      .button {
+         width: 175px;
+   }
+}
+
+.copy {
+   text-align: center;
+   padding-top: 10px;
+}
+
+
+
+
+
+
+
+
 
 
 
