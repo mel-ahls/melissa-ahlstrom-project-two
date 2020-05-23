@@ -1,3 +1,4 @@
+// BODY STYLES //
 .wrapper {
    max-width: 1200px;
    width: 90%;
@@ -9,6 +10,12 @@
 }
 
 // CONSISTENT STYLES //
+h1 {
+   font-family: $secondaryFont;
+   color: $marigold;
+   font-size: 105px;
+}
+
 h2 {
    font-family: $secondaryFont;
    color: $marigold;

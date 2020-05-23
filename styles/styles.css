@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -262,6 +263,12 @@ img {
   display: flex;
 }
 
+h1 {
+  font-family: "Dokdo", cursive;
+  color: #FFC600;
+  font-size: 105px;
+}
+
 h2 {
   font-family: "Dokdo", cursive;
   color: #FFC600;
@@ -292,6 +299,11 @@ a {
   font-family: "Dokdo", cursive;
   color: white;
   font-size: 25px;
+}
+
+.copy {
+  text-align: center;
+  padding-top: 10px;
 }
 
 .camoBack {
@@ -368,7 +380,7 @@ header.main {
   width: 40%;
 }
 
-.heading {
+.headingMain {
   font-family: "Lato", sans-serif;
   color: #FAFFFE;
   font-weight: 400;
@@ -510,7 +522,54 @@ span {
   width: 175px;
 }
 
-.copy {
-  text-align: center;
-  padding-top: 10px;
+header.blogPost {
+  height: 75vh;
+  width: 100vw;
+  background-image: url(assets/blog-image-1.jpg);
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+
+aside {
+  background: #555F02;
+  width: 300px;
+  margin-top: 90px;
+  position: absolute;
+  right: 0;
+  -webkit-box-shadow: -16px 14px 0px 0px #555F02;
+          box-shadow: -16px 14px 0px 0px #555F02;
+}
+
+aside h3 {
+  font-size: 20px;
+  font-family: "Dokdo", cursive;
+  color: #FAFFFE;
+  padding: 15px 0;
+}
+
+h3 ~ p {
+  font-size: 18px;
+}
+
+aside ul li {
+  list-style: none;
+  color: #FAFFFE;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+aside ul li::before {
+  content: "•";
+  color: #FFC600;
+  padding-right: 8px;
+}
+
+.post {
+  width: 55%;
+  position: absolute;
+}
+
+.comments {
+  width: 55%;
 }

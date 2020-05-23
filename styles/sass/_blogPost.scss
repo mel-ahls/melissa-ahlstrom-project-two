@@ -1,0 +1,55 @@
+header.blogPost {
+   height: 75vh;
+   width: 100vw;
+   background-image: url(assets/blog-image-1.jpg);
+   background-position: top center;
+   background-size: cover;
+   position: relative;
+}
+
+// ASIDE STYLES //
+aside {
+   background: $mudGreen;
+   width: 300px;
+   margin-top: 90px;
+   // float: right;
+   position: absolute;
+   right: 0;
+   box-shadow: -16px 14px 0px 0px $mudGreen;
+   h3 {
+      font-size: 20px;
+      font-family: $secondaryFont;
+      color: $iceBlue;
+      padding: 15px 0;
+   }
+}
+
+h3 ~ p {
+   font-size: 18px;
+}
+
+aside ul li {
+   list-style: none;
+   color: $iceBlue;
+   font-size: 18px;
+   padding-bottom: 10px;
+}
+
+aside ul li::before {
+   content: "•"; 
+   color: $marigold;
+   padding-right: 8px;
+}
+
+// BLOG POST STYLES //
+.postPosition {
+}
+
+.post {
+   width: 55%;
+   position: absolute;
+}
+
+.comments {
+   width: 55%;
+}
