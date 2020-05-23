@@ -1,0 +1,57 @@
+.wrapper {
+   max-width: 1200px;
+   width: 90%;
+   margin: 0 auto;
+}
+
+.flex {
+   display: flex
+}
+
+// CONSISTENT STYLES //
+h2 {
+   font-family: $secondaryFont;
+   color: $marigold;
+   font-size: 45px;
+}
+
+i ~ h2 {
+   font-size: 40px;
+}
+
+p {
+   font-family: $primaryFont;
+   color: $iceBlue;
+   font-size: 20px;
+   line-height: 132%;
+   letter-spacing: 2px;;
+}
+
+a {
+   text-decoration: none;
+}
+
+.button {
+   background: $mudGreen;
+   width: 30px;
+   color: $iceBlue;
+   padding: 10px 8px;
+   font-family: $secondaryFont;
+   color: white;
+   font-size: 25px;
+}
+
+// FOOTER COPYRIGHT //
+.copy {
+   text-align: center;
+   padding-top: 10px;
+}
+
+// BACKGROUND COLOURS //
+.camoBack {
+   background: $camoGreen;
+}
+
+.charcoalBack {
+   background: $charcoal;
+}
