@@ -21,11 +21,11 @@
       display:flex;
       justify-content: space-between;
             a {
+            font-family: $primaryFont;
             font-weight: 700;
+            color: $iceBlue;
             text-transform: uppercase;
             text-decoration: none;  
-            color: $iceBlue;
-            font-family: $primaryFont;
          
             &:hover {
                color: $marigold;

@@ -351,11 +351,11 @@ a {
 }
 
 .navBar ul a {
+  font-family: "Lato", sans-serif;
   font-weight: 700;
+  color: #FAFFFE;
   text-transform: uppercase;
   text-decoration: none;
-  color: #FAFFFE;
-  font-family: "Lato", sans-serif;
 }
 
 .navBar ul a:hover {
@@ -384,13 +384,19 @@ header.main {
   font-family: "Lato", sans-serif;
   color: #FAFFFE;
   font-weight: 400;
-  line-height: 60px;
+  line-height: 70px;
   position: absolute;
   top: 35%;
   left: 43%;
 }
 
-span {
+.headingMain h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 50px;
+  color: #FAFFFE;
+}
+
+.headingMain h1 span {
   font-family: "Dokdo", cursive;
   font-size: 115px;
   color: #FFC600;
@@ -523,17 +529,16 @@ span {
 }
 
 header.blogPost {
-  height: 75vh;
+  height: 52vh;
   width: 100vw;
   background-image: url(assets/blog-image-1.jpg);
   background-position: top center;
   background-size: cover;
-  position: relative;
 }
 
 aside {
   background: #555F02;
-  width: 300px;
+  width: 20%;
   margin-top: 90px;
   position: absolute;
   right: 0;
@@ -557,6 +562,8 @@ aside ul li {
   color: #FAFFFE;
   font-size: 18px;
   padding-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 2px;
 }
 
 aside ul li::before {
@@ -565,11 +572,62 @@ aside ul li::before {
   padding-right: 8px;
 }
 
-.post {
+.move {
+  -webkit-transform: translateY(-220px);
+          transform: translateY(-220px);
+}
+
+.boxShadow {
+  width: 56%;
+  -webkit-box-shadow: -1px 0px 0px 4px #555F02;
+          box-shadow: -1px 0px 0px 4px #555F02;
+}
+
+.heading ~ img {
   width: 55%;
-  position: absolute;
+  -webkit-box-shadow: 16px 14px 0px 0px #555F02;
+          box-shadow: 16px 14px 0px 0px #555F02;
+}
+
+.container {
+  padding-top: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments h2 {
+  font-family: "Dokdo", cursive;
+  color: #FAFFFE;
 }
 
 .comments {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments h3 {
+  color: #FAFFFE;
+  font-family: "Lato", sans-serif;
+}
+
+.davin, .lisa {
   width: 55%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 0;
+}
+
+.floatImg {
+  float: left;
+  width: 15%;
+}
+
+.flexText {
+  padding-left: 120px;
 }

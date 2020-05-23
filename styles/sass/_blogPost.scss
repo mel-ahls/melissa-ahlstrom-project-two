@@ -1,16 +1,15 @@
 header.blogPost {
-   height: 75vh;
+   height: 52vh;
    width: 100vw;
    background-image: url(assets/blog-image-1.jpg);
    background-position: top center;
    background-size: cover;
-   position: relative;
 }
 
 // ASIDE STYLES //
 aside {
    background: $mudGreen;
-   width: 300px;
+   width: 20%;
    margin-top: 90px;
    // float: right;
    position: absolute;
@@ -33,6 +32,8 @@ aside ul li {
    color: $iceBlue;
    font-size: 18px;
    padding-bottom: 10px;
+   font-family: $primaryFont;
+   letter-spacing: 2px;
 }
 
 aside ul li::before {
@@ -42,14 +43,54 @@ aside ul li::before {
 }
 
 // BLOG POST STYLES //
-.postPosition {
+.move {
+   transform: translateY(-220px);
 }
 
-.post {
-   width: 55%;
-   position: absolute;
+.boxShadow {
+   width: 56%;
+   box-shadow: -1px 0px 0px 4px #555F02;
+}
+
+.heading ~ img {
+      width: 55%;
+      box-shadow: 16px 14px 0px 0px #555F02;
+}
+
+.container {
+   padding-top: 50px;
+   // width: 56%;
+   flex-direction: column;
+}
+
+// COMMENT SECTION //
+.comments h2 {
+      font-family: $secondaryFont;
+      color: $iceBlue;
 }
 
 .comments {
-   width: 55%;
+   flex-direction: column;
+   h3 {
+      color: $iceBlue;
+      font-family: $primaryFont;
+   }
 }
+
+.davin, .lisa {
+   width: 55%;
+   flex-direction: column;
+   padding: 40px 0;
+}
+
+.floatImg {
+   float: left;
+   width: 15%;
+}
+
+.flexText {
+   padding-left: 120px;
+}
+
+// FORM //
+

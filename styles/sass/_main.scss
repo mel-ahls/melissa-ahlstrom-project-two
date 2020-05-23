@@ -18,17 +18,22 @@ header.main {
    font-family: $primaryFont;
    color: $iceBlue;
    font-weight: 400;
-   line-height: 60px;
+   line-height: 70px;
    position: absolute;
    top: 35%;
    left: 43%;
+      h1 {
+         font-family: $primaryFont;
+         font-size: 50px;
+         color: $iceBlue;
+         span {
+            font-family: $secondaryFont;
+            font-size: 115px;
+            color: $marigold;
+      }
+   }
 }
 
-span {
-   font-family: $secondaryFont;
-   font-size: 115px;
-   color: $marigold;
-}
 
 // SECTION ONE STYLES
 .adventure {
