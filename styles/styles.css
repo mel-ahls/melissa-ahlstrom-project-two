@@ -310,7 +310,7 @@ li {
 
 .copy {
   text-align: center;
-  padding-top: 10px;
+  padding: 10px;
 }
 
 .camoBack {
@@ -644,6 +644,47 @@ header.main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .info h2 {
+    font-size: 40px;
+  }
+  .flexBetween {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .locations, .programs {
+    width: 100%;
+  }
+  .locations {
+    text-align: left;
+    left: -20px;
+  }
+  .locText {
+    padding-left: 10px;
+  }
+  .programs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+    right: -20px;
+    bottom: 50px;
+  }
+  .progImg {
+    margin-bottom: 75px;
+  }
+  .progText {
+    padding-right: 10px;
+  }
+  .trials {
+    padding: 8%;
+    text-align: center;
+  }
+  .trials p {
+    padding-bottom: 15px;
   }
 }
 

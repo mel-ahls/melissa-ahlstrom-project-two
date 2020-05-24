@@ -72,7 +72,6 @@ header.main {
 }
 
 // SECTION THREE STYLES
-
 .position {
    position: relative;
 }
@@ -98,45 +97,7 @@ header.main {
    padding: 40px;
 }
 
-// SECTION FOUR STYLES 
-// .charcoalBack {
-//    position: relative;
-// }
-
-// .readImg1, .readImg2 {
-//    width: 40%;
-//    position: absolute;
-// }
-
-// .readImg1 {
-//    left: 0;
-//    top: -8%;
-//    box-shadow: 14px 14px 0px 0px $marigold;
-// }
-
-// .readImg2 {
-//    right: 0;
-//    bottom: -8%;
-//    box-shadow: -18px 18px 0px -5px $marigold;
-// }
-
-// .readMore {
-//    justify-content: space-between;
-// }
-
-// .programs, .locations {
-//    width: 40%;
-// }
-
-// .programs {
-//    padding-top: 5%;
-//    padding-bottom: 35%;
-// }
-
-// .locations {
-//    padding-top: 35%;
-//    padding-bottom: 5%;
-// }
+// SECTION FOUR //
 .flexBetween {
    display: flex;
    justify-content: space-between;
@@ -178,12 +139,6 @@ header.main {
    bottom: -40px;
 }
 
-
-
-
-
-
-
 // FOOTER STYLES
 .trials {
    flex-direction: column;
@@ -214,6 +169,8 @@ header.main {
       display: none;
    }
 
+   
+
    // SECTION ONE
    .adventure {
       flex-direction: column-reverse;
@@ -237,20 +194,51 @@ header.main {
    // SECTION THREE
    .info {
       flex-direction: column;
+      h2 {
+         font-size: 40px;
+      }
    }
 
-   // SECTION FOUR
-   // .charcoalBack {
-   //    position: static;
-   // }
+   // SECTION FOUR //
+   .flexBetween {
+      flex-direction: column;
+   }
 
-   // .readImg1, .readImg2 {
-   //    position: static;
-   //    width: auto;
-   //    .location, .programs {
-   //       padding: 0;
-   //    }
-   // }
+   .locations, .programs {
+      width: 100%;
+   }
 
+   .locations {
+      text-align: left;
+      left: -20px;
+   }
+
+   .locText {
+      padding-left: 10px;
+   }
+
+   .programs {
+      flex-direction: column;
+      text-align: right;
+      right: -20px;
+      bottom: 50px;
+   }
+
+   .progImg {
+      margin-bottom: 75px;
+   }
+
+   .progText {
+      padding-right: 10px;
+   }
+
+   // SECTION FIVE //
+   .trials {
+      padding: 8%;
+      text-align: center;
+      p {
+         padding-bottom: 15px;;
+      }
+   }
 
 }
