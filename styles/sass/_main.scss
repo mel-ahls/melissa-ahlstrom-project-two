@@ -37,7 +37,7 @@ header.main {
 
 // SECTION ONE STYLES
 .adventure {
-   height: 550px;
+   padding-top: 165px;
    padding-bottom: 70px;
    justify-content: space-between;
    align-items: flex-end;
@@ -46,8 +46,7 @@ header.main {
    }
 }
 
-// P FROM SECTION FOUR ADDED TO STAY WITH 1 RULE
-.adText p, .location p, .programs, p {
+.adText p {
    padding-bottom: 25px;
 }
 
@@ -100,44 +99,90 @@ header.main {
 }
 
 // SECTION FOUR STYLES 
-.charcoalBack {
+// .charcoalBack {
+//    position: relative;
+// }
+
+// .readImg1, .readImg2 {
+//    width: 40%;
+//    position: absolute;
+// }
+
+// .readImg1 {
+//    left: 0;
+//    top: -8%;
+//    box-shadow: 14px 14px 0px 0px $marigold;
+// }
+
+// .readImg2 {
+//    right: 0;
+//    bottom: -8%;
+//    box-shadow: -18px 18px 0px -5px $marigold;
+// }
+
+// .readMore {
+//    justify-content: space-between;
+// }
+
+// .programs, .locations {
+//    width: 40%;
+// }
+
+// .programs {
+//    padding-top: 5%;
+//    padding-bottom: 35%;
+// }
+
+// .locations {
+//    padding-top: 35%;
+//    padding-bottom: 5%;
+// }
+.flexBetween {
+   display: flex;
+   justify-content: space-between;
+   // padding: 90px 0;
    position: relative;
 }
 
-.readImg1, .readImg2 {
-   width: 40%;
-   position: absolute;
+.locImg {
+   box-shadow: 24px 24px 0px -10px $marigold;
+   margin-bottom: 75px;
 }
 
-.readImg1 {
-   left: 0;
-   top: -8%;
-   box-shadow: 14px 14px 0px 0px $marigold;
+.progImg {
+   box-shadow: -24px 24px 0px -10px $marigold;
+   margin-top: 75px;
+   
 }
 
-.readImg2 {
-   right: 0;
-   bottom: -8%;
-   box-shadow: -18px 18px 0px -5px $marigold;
-}
-
-.readMore {
-   justify-content: space-between;
-}
-
-.programs, .locations {
-   width: 40%;
-}
-
-.programs {
-   padding-top: 5%;
-   padding-bottom: 35%;
+.locations, .programs {
+  width: 45%;
+  justify-content: space-between;
+  position: relative;
+  p {
+     padding-bottom: 15px;
+  }
 }
 
 .locations {
-   padding-top: 35%;
-   padding-bottom: 5%;
+   flex-direction: column;
+   justify-content: flex-end;
+   left: -60px;
+   top: -40px;
+   text-align: right;   
 }
+
+.programs {
+   flex-direction: column-reverse;
+   right: -60px;
+   bottom: -40px;
+}
+
+
+
+
+
+
 
 // FOOTER STYLES
 .trials {
@@ -151,7 +196,61 @@ header.main {
 
 // MAIN MEDIA QUERIES //
 
-// SMALLER DESKTOP & LARGE TABLET //
-@media (max-width: 1075px) {
+// SMALLER DESKTOP //
+@media (max-width: 1125px) {
+   .headingMain {
+      left: 6%;
+   }
+
+   .info h2 {
+      font-size: 4vw;
+   }
+}
+
+// LARGE TABLET //
+@media (max-width: 965px) {
+   // HEADER
+   .welcome {
+      display: none;
+   }
+
+   // SECTION ONE
+   .adventure {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 80px 0;
+   }
+
+   .adventure .adText {
+      width: 100%;
+      text-align: center;
+   }
+
+   .adImg {
+      padding-bottom: 62px;
+      img {
+         width: auto;
+      }
+   }
+
+   // SECTION THREE
+   .info {
+      flex-direction: column;
+   }
+
+   // SECTION FOUR
+   // .charcoalBack {
+   //    position: static;
+   // }
+
+   // .readImg1, .readImg2 {
+   //    position: static;
+   //    width: auto;
+   //    .location, .programs {
+   //       padding: 0;
+   //    }
+   // }
+
 
 }

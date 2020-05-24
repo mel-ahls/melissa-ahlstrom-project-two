@@ -1,4 +1,8 @@
 // BODY STYLES //
+body {
+   overflow-x: hidden;
+}
+
 .wrapper {
    max-width: 1200px;
    width: 90%;
@@ -44,12 +48,11 @@ li {
 
 .button {
    background: $mudGreen;
-   width: 30px;
    color: $iceBlue;
    padding: 10px 8px;
    font-family: $secondaryFont;
-   color: white;
    font-size: 25px;
+   display: inline-block;
 }
 
 // FOOTER COPYRIGHT //

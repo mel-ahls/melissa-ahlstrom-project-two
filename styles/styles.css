@@ -251,6 +251,10 @@ img {
   display: block;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 90%;
@@ -297,12 +301,11 @@ li {
 
 .button {
   background: #555F02;
-  width: 30px;
   color: #FAFFFE;
   padding: 10px 8px;
   font-family: "Dokdo", cursive;
-  color: white;
   font-size: 25px;
+  display: inline-block;
 }
 
 .copy {
@@ -374,7 +377,7 @@ li {
   display: none;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 965px) {
   .hamburger label, .hamburger input, .hamburger ul {
     display: block;
   }
@@ -462,7 +465,7 @@ header.main {
 }
 
 .adventure {
-  height: 550px;
+  padding-top: 165px;
   padding-bottom: 70px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -476,7 +479,7 @@ header.main {
   width: 60%;
 }
 
-.adText p, .location p, .programs, p {
+.adText p {
   padding-bottom: 25px;
 }
 
@@ -529,47 +532,60 @@ header.main {
   padding: 40px;
 }
 
-.charcoalBack {
-  position: relative;
-}
-
-.readImg1, .readImg2 {
-  width: 40%;
-  position: absolute;
-}
-
-.readImg1 {
-  left: 0;
-  top: -8%;
-  -webkit-box-shadow: 14px 14px 0px 0px #FFC600;
-          box-shadow: 14px 14px 0px 0px #FFC600;
-}
-
-.readImg2 {
-  right: 0;
-  bottom: -8%;
-  -webkit-box-shadow: -18px 18px 0px -5px #FFC600;
-          box-shadow: -18px 18px 0px -5px #FFC600;
-}
-
-.readMore {
+.flexBetween {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
-.programs, .locations {
-  width: 40%;
+.locImg {
+  -webkit-box-shadow: 24px 24px 0px -10px #FFC600;
+          box-shadow: 24px 24px 0px -10px #FFC600;
+  margin-bottom: 75px;
 }
 
-.programs {
-  padding-top: 5%;
-  padding-bottom: 35%;
+.progImg {
+  -webkit-box-shadow: -24px 24px 0px -10px #FFC600;
+          box-shadow: -24px 24px 0px -10px #FFC600;
+  margin-top: 75px;
+}
+
+.locations, .programs {
+  width: 45%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.locations p, .programs p {
+  padding-bottom: 15px;
 }
 
 .locations {
-  padding-top: 35%;
-  padding-bottom: 5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  left: -60px;
+  top: -40px;
+  text-align: right;
+}
+
+.programs {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  right: -60px;
+  bottom: -40px;
 }
 
 .trials {
@@ -585,6 +601,50 @@ header.main {
 
 .trials .button {
   width: 175px;
+}
+
+@media (max-width: 1125px) {
+  .headingMain {
+    left: 6%;
+  }
+  .info h2 {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 965px) {
+  .welcome {
+    display: none;
+  }
+  .adventure {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 80px 0;
+  }
+  .adventure .adText {
+    width: 100%;
+    text-align: center;
+  }
+  .adImg {
+    padding-bottom: 62px;
+  }
+  .adImg img {
+    width: auto;
+  }
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 input {
