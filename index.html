@@ -11,20 +11,31 @@
 </head>
 <body>
 <!-- HEADER -->
-<header class="main">
+<header id="home" class="main">
    <div class="wrapper">
-   <div class="navBar">
-      <p class="logo">Mindn'Soul</p>
-      <nav>
-         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-         </ul>
-      </nav>
+      <div class="navBar">
+         <p class="logo">Mindn'Soul</p>
+         <nav>
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#blog">Blog</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
    </div>
-   </div>
+ <!-- HAMBURGER NAV -->
+   <nav class="hamburger">
+      <label for="toggle"><i class="fa fa-bars"></i></label>
+      <input type="checkbox" id="toggle" name="toggle" />
+      <ul class="mobileMenu">
+         <li><a href="#home">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#blog">Blog</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+   </nav>
    <div class="welcome">
       <img src="styles/assets/Group.jpg" alt="woman doing a yoga pose">
    </div>

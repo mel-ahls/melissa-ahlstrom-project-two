@@ -6,6 +6,7 @@
    font-family: $secondaryFont;
    color: $marigold;
    font-size: 41.5px;
+   padding-bottom: 0;
 }
 
 .navBar nav {
@@ -36,5 +37,69 @@
    }
 }
 
+.hamburger label, .hamburger input, .hamburger ul {
+   display: none;
+}
+
+// HAMBURGER NAV //
+@media (max-width: 940px) {
+      .hamburger label, .hamburger input, .hamburger ul {
+         display: block;
+      }
+
+      .navBar nav {
+         display: none;
+      }
+
+      .hamburger i {
+         font-size: 35px;
+         color: $iceBlue;
+      }
+
+      ul.mobileMenu {
+      background: $charcoal;
+      position: fixed;
+      z-index: 10;
+      width: 30%;
+      right: -30%;
+      top: 70px;
+      height: 33%;
+      transition: all 0.5s;
+   }
+
+   ul.mobileMenu a {
+      display: inline-block;
+      font-family: $primaryFont;
+      font-size: 30px;
+      font-weight: 300;
+      color: $marigold;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+      transition: all 0.3s;
+
+   }
+
+   // ul.mobileMenu a:focus {
+   //    color: $marigold;
+   // }
+
+   input[type="checkbox"]:checked + ul.mobileMenu {
+      right: 0;
+   }
+
+   input[type="checkbox"] {
+      display: none;
+   }
+
+   label[for="toggle"] {
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      color: white;
+      z-index: 10;
+   }
+}
 
 

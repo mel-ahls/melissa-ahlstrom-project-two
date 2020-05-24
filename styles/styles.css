@@ -291,6 +291,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .button {
   background: #555F02;
   width: 30px;
@@ -322,6 +326,7 @@ a {
   font-family: "Dokdo", cursive;
   color: #FFC600;
   font-size: 41.5px;
+  padding-bottom: 0;
 }
 
 .navBar nav {
@@ -365,18 +370,72 @@ a {
   transition: .03;
 }
 
+.hamburger label, .hamburger input, .hamburger ul {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .hamburger label, .hamburger input, .hamburger ul {
+    display: block;
+  }
+  .navBar nav {
+    display: none;
+  }
+  .hamburger i {
+    font-size: 35px;
+    color: #FAFFFE;
+  }
+  ul.mobileMenu {
+    background: #262725;
+    position: fixed;
+    z-index: 10;
+    width: 30%;
+    right: -30%;
+    top: 70px;
+    height: 33%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  ul.mobileMenu a {
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #FFC600;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  input[type="checkbox"]:checked + ul.mobileMenu {
+    right: 0;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  label[for="toggle"] {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    color: white;
+    z-index: 10;
+  }
+}
+
 header.main {
   height: 75vh;
   width: 100vw;
   background-image: url(assets/home-image-1.jpg);
-  background-position: top center;
+  background-position: bottom right;
   background-size: cover;
   position: relative;
 }
 
 .welcome {
   position: absolute;
-  bottom: -125px;
+  bottom: -14%;
   width: 40%;
 }
 
@@ -386,19 +445,19 @@ header.main {
   font-weight: 400;
   line-height: 70px;
   position: absolute;
-  top: 35%;
+  top: 32%;
   left: 43%;
 }
 
 .headingMain h1 {
   font-family: "Lato", sans-serif;
-  font-size: 50px;
+  font-size: 3.5vw;
   color: #FAFFFE;
 }
 
 .headingMain h1 span {
   font-family: "Dokdo", cursive;
-  font-size: 115px;
+  font-size: 7vw;
   color: #FFC600;
 }
 
@@ -528,6 +587,53 @@ header.main {
   width: 175px;
 }
 
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFC600;
+  color: #FAFFFE;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+input#comment {
+  border: 2px solid #FFC600;
+}
+
+input[type="name"], input[type="email"] {
+  width: calc( (55% / 2) - 10px);
+  margin: 8px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="name"] {
+  margin-left: 0;
+}
+
+input[type="email"] {
+  margin-right: 0;
+}
+
+input[type="text"] {
+  width: 55%;
+  height: 200px;
+  padding-bottom: 125px;
+  padding-left: 20px;
+  color: #FAFFFE;
+}
+
+input[type="submit"] {
+  font-family: "Dokdo", cursive;
+  font-size: 20px;
+  width: 55%;
+  height: 35px;
+  background-color: #555F02;
+  border: none;
+  margin-top: 20px;
+}
+
 header.blogPost {
   height: 52vh;
   width: 100vw;
@@ -538,12 +644,12 @@ header.blogPost {
 
 aside {
   background: #555F02;
-  width: 20%;
+  width: 22%;
   margin-top: 90px;
   position: absolute;
   right: 0;
-  -webkit-box-shadow: -16px 14px 0px 0px #555F02;
-          box-shadow: -16px 14px 0px 0px #555F02;
+  -webkit-box-shadow: -1px 29px 0px 14px #555F02;
+          box-shadow: -1px 29px 0px 14px #555F02;
 }
 
 aside h3 {
@@ -590,7 +696,7 @@ aside ul li::before {
 }
 
 .container {
-  padding-top: 50px;
+  padding: 50px 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -607,11 +713,12 @@ aside ul li::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 40px 0;
 }
 
 .comments h3 {
-  color: #FAFFFE;
   font-family: "Lato", sans-serif;
+  color: #FFC600;
 }
 
 .davin, .lisa {
@@ -625,9 +732,53 @@ aside ul li::before {
 
 .floatImg {
   float: left;
-  width: 15%;
+  width: 13%;
 }
 
 .flexText {
   padding-left: 120px;
+}
+
+header.contact {
+  height: 52vh;
+  width: 100vw;
+  background-image: url(assets/contact-image-1.jpg);
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+
+.headingContact {
+  position: absolute;
+  top: 212px;
+}
+
+form.contactForm {
+  background-color: #262725;
+  position: absolute;
+  top: 318px;
+}
+
+.contactForm input[type="text"], .contactForm input[type="submit"] {
+  width: 70%;
+}
+
+.contactForm input[type="name"], .contactForm input[type="email"] {
+  width: calc( (70% / 2) - 16px);
+  margin: 9px;
+}
+
+.contactCard {
+  width: 100%;
+  height: 41.3vh;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.social {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }

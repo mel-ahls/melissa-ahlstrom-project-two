@@ -3,14 +3,14 @@ header.main {
    height: 75vh;
    width: 100vw;
    background-image: url(assets/home-image-1.jpg);
-   background-position: top center;
+   background-position: bottom right;
    background-size: cover;
    position: relative;
 }
 
 .welcome {
    position: absolute;
-   bottom: -125px;
+   bottom: -14%;
    width: 40%;
 }
 
@@ -20,15 +20,15 @@ header.main {
    font-weight: 400;
    line-height: 70px;
    position: absolute;
-   top: 35%;
+   top: 32%;
    left: 43%;
       h1 {
          font-family: $primaryFont;
-         font-size: 50px;
+         font-size: 3.5vw;
          color: $iceBlue;
          span {
             font-family: $secondaryFont;
-            font-size: 115px;
+            font-size: 7vw;
             color: $marigold;
       }
    }
@@ -147,4 +147,11 @@ header.main {
       .button {
          width: 175px;
    }
+}
+
+// MAIN MEDIA QUERIES //
+
+// SMALLER DESKTOP & LARGE TABLET //
+@media (max-width: 1075px) {
+
 }

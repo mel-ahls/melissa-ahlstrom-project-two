@@ -10,8 +10,8 @@
    <script src="https://kit.fontawesome.com/73650af842.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   <!-- HEADER -->
-<header class="contact">
+<!-- HEADER -->
+<header id="contact" class="contact">
    <div class="wrapper">
       <div class="navBar">
          <p>Mindn'Soul</p>
@@ -24,39 +24,64 @@
             </ul>
          </nav>
       </div>
+   <!-- HAMBURGER NAV -->
+   <nav class="hamburger">
+      <label for="toggle"><i class="fa fa-bars"></i></label>
+      <input type="checkbox" id="toggle" name="toggle" />
+      <ul class="mobileMenu">
+         <li><a href="#home">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#blog">Blog</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+   </nav>
    </div>
 </header>
-   <!-- SECTION -->
+<!-- SECTION -->
 <section>
-   <div>
-      <h1 class="heading">Get in Touch</h1>
-      <form>
-         <input type="name" value="" name="name" placeholder="name" required>
-         <input type="email address" value="" name="email addres" placeholder="email address" required>
-         <textarea name="message" id="message" cols="30" rows="10">Message</textarea>
-         <br><input type="submit" value="Submit" name="submit">
-      </form>
-   </div>
-   <!-- ASIDE -->
-   <aside>
-      <div class="social">
-         <a href="#"><i class="fab fa-facebook-f"></i></a>
-         <a href="#"><i class="fab fa-instagram"></i></a>
-         <a href="#"><i class="fab fa-twitter"></i></a>
-         <a href="#"><i class="fab fa-whatsapp"></i></a>
+   <div class="wrapper">
+      <div class="flex contactForm">
+         <div class="headingContact">
+            <h1>Get in Touch</h1>
+         </div>
+         <form class="contactForm">
+            <div>
+               <input type="name" value="Name" name="Name">
+               <input type="email" value="Email Address" name="Email Address">
+            </div>
+            <input type="text" id="comment" name="comment" placeholder="Comment"><br>
+            <input type="submit" value="Post Comment">
+         </form>
       </div>
-      <p>info@email.com</p>
-      <ul>
-         <li>123-456-7890</li>
-         <li>123 Queen Street West,<br>Unit 10</li>
-         <li>Toronto, Ontario</li>
-         <li>M5V2D5</li>
-      </ul>
-   </aside>
+   </div>
+</section>   
+<!-- SECTION -->
+<section>
+   <div class="camoBack">
+      <div class="wrapper">
+            <div class="contactCard flex">
+               <div class="social flex">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+               </div>
+               <div>
+                  <p>info@email.com</p>
+                  <ul>
+                     <li>123-456-7890</li>
+                     <li>123 Queen Street West,<br>Unit 10</li>
+                     <li>Toronto, Ontario</li>
+                     <li>M5V2D5</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
 </section>
 <!-- FOOTER -->
 <footer>
-   <div class="copy">
+   <div class="copy charcoalBack">
       <p>Copyright © 2019 HackerYou</p>
    </div>
 </footer>

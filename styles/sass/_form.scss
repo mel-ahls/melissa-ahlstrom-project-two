@@ -1,0 +1,46 @@
+input {
+   background-color: transparent;
+   border: none;
+   border-bottom: 2px solid $marigold;
+   color: $iceBlue;
+   font-family: $primaryFont;
+   font-weight: 300;
+}
+
+input#comment {
+   border: 2px solid $marigold;
+}
+
+input[type="name"], input[type="email"] {
+   width: calc( (55% / 2) - 10px);
+   margin: 8px;
+   padding-left: 20px;
+   padding-bottom: 10px;
+   margin-bottom: 20px;
+}
+
+input[type="name"] {
+   margin-left: 0;
+}
+
+input[type="email"] {
+   margin-right: 0;
+}
+
+input[type="text"] {
+   width: 55%;
+   height: 200px;
+   padding-bottom: 125px;
+   padding-left: 20px;
+   color: $iceBlue;
+}
+
+input[type="submit"] {
+   font-family: $secondaryFont;;
+   font-size: 20px;
+   width: 55%;
+   height: 35px;
+   background-color: $mudGreen;
+   border: none;
+   margin-top: 20px;
+}
