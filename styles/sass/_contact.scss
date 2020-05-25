@@ -5,13 +5,21 @@ header.contact {
    background-image: url(assets/contact-image-1.jpg);
    background-position: top center;
    background-size: cover;
+   position: relative;
 }
 
 // CONTACT FORM STYLING //
-.contactFlex {
-   display: flex;
+.fixHeight {
+   height: 71vh;
 }
 
+.contactFlex {
+   display: flex;
+   justify-content: space-between;
+}
+.headingContact h1{
+   margin-left: 50px;
+}
 .headingContact {
    position: relative;
    margin-top: -220px;
@@ -20,8 +28,56 @@ header.contact {
 .contactForm {
    background-color: $charcoal;
    width: 70%;
+   position: relative;
+   padding: 50px;
+   box-shadow: 24px 24px 0px -10px $marigold;
 }
 
 .contactForm input[type="name"], .contactForm input[type="email"] {
-   width: calc((100% / 2) - 5px);
+   width: calc((100% / 2) - 10px);
+   padding-bottom: 16px;
+   padding-left: 10px;
+}
+
+.contactForm input[type="text"] {
+   width: 100%;
+   height: 150px;
+   margin-top: 30px;
+}  
+
+.contactForm input[type="submit"] {
+   font-size: 22px;
+   width: 100%;
+   padding: 1%;
+   margin-top: 25px;
+}
+
+.credentialsInputs {
+   display: flex;
+   justify-content: space-between;
+}
+
+.contactForm input#message {
+   height: 200px;
+   ::placeholder {
+      font-size: 50px;
+   }
+}
+
+.contactCard {
+   font-family: $primaryFont;
+   color: $iceBlue;
+   border: 1px solid red;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   ~ p {
+      font-size: 20px;
+   }
+}
+
+.contactCard i {
+   color: yellow;
+   padding: 10px;
 }

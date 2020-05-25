@@ -13,7 +13,7 @@ input:focus {
    border: 2px dotted grey;
 }
 
-input#comment {
+input[type=text] {
    border: 2px solid $marigold;
 }
 

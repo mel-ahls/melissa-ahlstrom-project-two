@@ -701,7 +701,7 @@ input:focus {
   border: 2px dotted grey;
 }
 
-input#comment {
+input[type=text] {
   border: 2px solid #FFC600;
 }
 
@@ -855,12 +855,24 @@ header.contact {
   background-image: url(assets/contact-image-1.jpg);
   background-position: top center;
   background-size: cover;
+  position: relative;
+}
+
+.fixHeight {
+  height: 71vh;
 }
 
 .contactFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headingContact h1 {
+  margin-left: 50px;
 }
 
 .headingContact {
@@ -871,8 +883,84 @@ header.contact {
 .contactForm {
   background-color: #262725;
   width: 70%;
+  position: relative;
+  padding: 50px;
+  -webkit-box-shadow: 24px 24px 0px -10px #FFC600;
+          box-shadow: 24px 24px 0px -10px #FFC600;
 }
 
 .contactForm input[type="name"], .contactForm input[type="email"] {
-  width: calc((100% / 2) - 5px);
+  width: calc((100% / 2) - 10px);
+  padding-bottom: 16px;
+  padding-left: 10px;
+}
+
+.contactForm input[type="text"] {
+  width: 100%;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.contactForm input[type="submit"] {
+  font-size: 22px;
+  width: 100%;
+  padding: 1%;
+  margin-top: 25px;
+}
+
+.credentialsInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactForm input#message {
+  height: 200px;
+}
+
+.contactForm input#message ::-webkit-input-placeholder {
+  font-size: 50px;
+}
+
+.contactForm input#message :-ms-input-placeholder {
+  font-size: 50px;
+}
+
+.contactForm input#message ::-ms-input-placeholder {
+  font-size: 50px;
+}
+
+.contactForm input#message ::placeholder {
+  font-size: 50px;
+}
+
+.contactCard {
+  font-family: "Lato", sans-serif;
+  color: #FAFFFE;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contactCard ~ p {
+  font-size: 20px;
+}
+
+.contactCard i {
+  color: yellow;
+  padding: 10px;
 }
