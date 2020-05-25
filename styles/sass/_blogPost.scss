@@ -4,16 +4,16 @@ header.blogPost {
    background-image: url(assets/blog-image-1.jpg);
    background-position: top center;
    background-size: cover;
+   position: relative;
 }
 
 // ASIDE STYLES //
 aside {
    background: $mudGreen;
-   width: 22%;
+   width: 25%;
+   display: block;
+   float: right;
    margin-top: 90px;
-   // float: right;
-   position: absolute;
-   right: 0;
    box-shadow: -1px 29px 0px 14px $mudGreen;
    h3 {
       font-size: 20px;
@@ -28,12 +28,12 @@ h3 ~ p {
 }
 
 aside ul li {
-   list-style: none;
+   font-family: $primaryFont;
    color: $iceBlue;
    font-size: 18px;
-   padding-bottom: 10px;
-   font-family: $primaryFont;
    letter-spacing: 2px;
+   list-style: none;
+   padding-bottom: 10px;
 }
 
 aside ul li::before {
@@ -43,23 +43,24 @@ aside ul li::before {
 }
 
 // BLOG POST STYLES //
-.move {
-   transform: translateY(-220px);
+.heading {
+   position: relative;
+   margin-top: -198px;
+   z-index: 100;
 }
 
+.heading ~ img {
+   width: 55%;
+   box-shadow: 16px 14px 0px 0px #555F02;
+   position: relative;
+}
 .boxShadow {
    width: 56%;
    box-shadow: -1px 0px 0px 4px #555F02;
 }
 
-.heading ~ img {
-      width: 55%;
-      box-shadow: 16px 14px 0px 0px #555F02;
-}
-
 .container {
    padding: 50px 0;
-   // width: 56%;
    flex-direction: column;
 }
 
@@ -91,4 +92,35 @@ aside ul li::before {
 
 .flexText {
    padding-left: 120px;
+}
+
+// BLOG FORM STYING //
+.blogForm input[type="name"], .blogForm input[type="email"] {
+   width: calc( (55% / 2) - 10px);
+   margin: 8px;
+   padding-left: 20px;
+   padding-bottom: 10px;
+   margin-bottom: 20px;
+}
+
+.blogForm input[type="name"] {
+   margin-left: 0;
+}
+
+.blogForm input[type="email"] {
+   margin-right: 0;
+}
+
+.blogForm input[type="text"] {
+   width: 55%;
+   height: 200px;
+   padding-bottom: 125px;
+   padding-left: 20px;
+}
+
+.blogForm input[type="submit"] {
+   margin-top: 20px;
+   font-size: 20px;
+   width: 55%;
+   height: 35px;
 }
