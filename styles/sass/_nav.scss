@@ -56,14 +56,18 @@
          color: $iceBlue;
       }
 
+      .mobileMenu {
+         border: 2px solid $mudGreen
+      }
+
       ul.mobileMenu {
       background: $charcoal;
       position: fixed;
       z-index: 10;
-      width: 30%;
-      right: -30%;
+      padding: 0 30px;
+      width: 250px;
+      right: -250px;
       top: 70px;
-      height: 33%;
       transition: all 0.5s;
    }
 
@@ -96,5 +100,3 @@
       z-index: 10;
    }
 }
-
-

@@ -10,7 +10,7 @@ header.contact {
 
 // CONTACT FORM STYLING //
 .fixHeight {
-   height: 71vh;
+   min-height: 71vh;
 }
 
 .contactFlex {
@@ -33,7 +33,7 @@ header.contact {
    box-shadow: 24px 24px 0px -10px $marigold;
 }
 
-.contactForm input[type="name"], .contactForm input[type="email"] {
+.credentialsInputs input[type="name"], .credentialsInputs input[type="email"] {
    width: calc((100% / 2) - 10px);
    padding-bottom: 16px;
    padding-left: 10px;
@@ -41,7 +41,7 @@ header.contact {
 
 .contactForm input[type="text"] {
    width: 100%;
-   height: 150px;
+   height: 200px;
    margin-top: 30px;
 }  
 
@@ -57,27 +57,92 @@ header.contact {
    justify-content: space-between;
 }
 
-.contactForm input#message {
-   height: 200px;
-   ::placeholder {
-      font-size: 50px;
-   }
-}
-
 .contactCard {
    font-family: $primaryFont;
    color: $iceBlue;
-   border: 1px solid red;
    display: flex;
    align-items: center;
    flex-direction: column;
-   justify-content: center;
-   ~ p {
-      font-size: 20px;
+   justify-content: flex-end;
+   padding-bottom: 45px;
+   p {
+      font-size: 18px;
+      padding-bottom: 18px;
    }
 }
 
-.contactCard i {
-   color: yellow;
-   padding: 10px;
+.contactCard li {
+   font-size: 18px;
+   padding-bottom: 5px;
+}
+
+.contactCard a {
+   color: $marigold;
+   padding-right: 30px;
+   padding-bottom: 10px;
+   font-size: 20px;
+}
+
+// MEDIA QUERIES//
+
+// LARGE TABLET //
+@media (max-width: 965px) {
+   .headingContact h1 {
+      font-size: 12vw;
+   }
+
+   .contactFlex {
+      flex-direction: column;
+   }
+
+   .contactForm {
+      width: 100%;
+      padding: 6%;
+   }
+
+   .contactCard {
+      margin-top: 55px;
+      flex-direction: row;
+      justify-content: space-around;
+      a {
+         font-size: 30px
+      }
+   }
+}
+
+
+
+// MOBILE //
+@media (max-width: 430px) {
+
+   .contactForm {
+      
+   }
+
+   .credentialsInputs {
+      flex-direction: column;
+      input[type="name"], input[type="email"] {
+         width: 100%;
+         text-align: center;
+         padding: 22px 0 10px 0
+      }
+   }
+
+   .contactForm {
+      width: 100%
+   }
+
+   .contactCard {
+      flex-direction: column-reverse;
+      text-align: center;
+   }
+
+   .social {
+      padding-top: 20px;
+      a {
+         padding-right: 0;
+         padding: 20px
+      }
+   }
+
 }

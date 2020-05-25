@@ -388,14 +388,17 @@ li {
     font-size: 35px;
     color: #FAFFFE;
   }
+  .mobileMenu {
+    border: 2px solid #555F02;
+  }
   ul.mobileMenu {
     background: #262725;
     position: fixed;
     z-index: 10;
-    width: 30%;
-    right: -30%;
+    padding: 0 30px;
+    width: 250px;
+    right: -250px;
     top: 70px;
-    height: 33%;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
@@ -698,10 +701,10 @@ input {
 }
 
 input:focus {
-  border: 2px dotted grey;
+  border: 1px dotted grey;
 }
 
-input[type=text] {
+input[type="text"] {
   border: 2px solid #FFC600;
 }
 
@@ -859,7 +862,7 @@ header.contact {
 }
 
 .fixHeight {
-  height: 71vh;
+  min-height: 71vh;
 }
 
 .contactFlex {
@@ -889,7 +892,7 @@ header.contact {
           box-shadow: 24px 24px 0px -10px #FFC600;
 }
 
-.contactForm input[type="name"], .contactForm input[type="email"] {
+.credentialsInputs input[type="name"], .credentialsInputs input[type="email"] {
   width: calc((100% / 2) - 10px);
   padding-bottom: 16px;
   padding-left: 10px;
@@ -897,7 +900,7 @@ header.contact {
 
 .contactForm input[type="text"] {
   width: 100%;
-  height: 150px;
+  height: 200px;
   margin-top: 30px;
 }
 
@@ -917,30 +920,9 @@ header.contact {
           justify-content: space-between;
 }
 
-.contactForm input#message {
-  height: 200px;
-}
-
-.contactForm input#message ::-webkit-input-placeholder {
-  font-size: 50px;
-}
-
-.contactForm input#message :-ms-input-placeholder {
-  font-size: 50px;
-}
-
-.contactForm input#message ::-ms-input-placeholder {
-  font-size: 50px;
-}
-
-.contactForm input#message ::placeholder {
-  font-size: 50px;
-}
-
 .contactCard {
   font-family: "Lato", sans-serif;
   color: #FAFFFE;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -951,16 +933,84 @@ header.contact {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 45px;
 }
 
-.contactCard ~ p {
+.contactCard p {
+  font-size: 18px;
+  padding-bottom: 18px;
+}
+
+.contactCard li {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.contactCard a {
+  color: #FFC600;
+  padding-right: 30px;
+  padding-bottom: 10px;
   font-size: 20px;
 }
 
-.contactCard i {
-  color: yellow;
-  padding: 10px;
+@media (max-width: 965px) {
+  .headingContact h1 {
+    font-size: 12vw;
+  }
+  .contactFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactForm {
+    width: 100%;
+    padding: 6%;
+  }
+  .contactCard {
+    margin-top: 55px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contactCard a {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 430px) {
+  .credentialsInputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .credentialsInputs input[type="name"], .credentialsInputs input[type="email"] {
+    width: 100%;
+    text-align: center;
+    padding: 22px 0 10px 0;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .contactCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  .social {
+    padding-top: 20px;
+  }
+  .social a {
+    padding-right: 0;
+    padding: 20px;
+  }
 }
