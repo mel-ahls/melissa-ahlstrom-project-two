@@ -8,17 +8,20 @@ header.contact {
 }
 
 // CONTACT FORM STYLING //
-.contactForm {
+.contactFlex {
+   display: flex;
+}
+
+.headingContact {
    position: relative;
    margin-top: -220px;
 }
 
-.contactForm form {
+.contactForm {
    background-color: $charcoal;
+   width: 70%;
 }
 
-.contactFlex {
-   display: flex;
-   justify-content: space-between;
-
+.contactForm input[type="name"], .contactForm input[type="email"] {
+   width: calc((100% / 2) - 5px);
 }

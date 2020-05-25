@@ -9,6 +9,10 @@ input {
    font-weight: 300;
 }
 
+input:focus {
+   border: 2px dotted grey;
+}
+
 input#comment {
    border: 2px solid $marigold;
 }

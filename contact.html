@@ -40,19 +40,21 @@
 <!-- SECTION -->
 <section class="camoBack">
    <div class="wrapper contactFlex">
-      <div class="contactForm">
-         <!-- <div class="headingContact"> -->
-            <h1>Get in Touch</h1>
-         <!-- </div> -->
-         <form>
-            <div>
-               <input type="name" value="Name" name="Name">
-               <input type="email" value="Email Address" name="Email Address">
-            </div>
-            <input type="text" id="comment" name="comment" placeholder="Comment"><br>
-            <input type="submit" value="Sumbit">
-         </form>
-      </div>  
+      <div class="headingContact">
+         <h1>Get in Touch</h1>
+      </div>
+      <form class="contactForm">
+         <div>
+            <label class="sr-only" id"name" for="name">Name</label>
+            <input type="name" value="Name" name="Name">
+            <label class="sr-only" id"email" for="email">Email</label>
+            <input type="email" value="Email Address" name="Email Address">
+         </div>
+            <label class="sr-only" id"message" for="message">Message</label>
+            <input type="text" id="message" name="message" placeholder="Message"><br>
+            <label class="sr-only" id"submit" for="submit">Submit</label>
+            <input type="submit" value="Submit">
+      </form>  
       <div class="contactCard">
          <div class="social flex">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -69,8 +71,8 @@
                <li>M5V2D5</li>
             </ul>
          </div>
-      </div>
-   </div>   
+      </div>  
+   </div>
 </section>
 <!-- FOOTER -->
 <footer>

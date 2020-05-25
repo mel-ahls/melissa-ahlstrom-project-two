@@ -697,6 +697,10 @@ input {
   font-weight: 300;
 }
 
+input:focus {
+  border: 2px dotted grey;
+}
+
 input#comment {
   border: 2px solid #FFC600;
 }
@@ -853,20 +857,22 @@ header.contact {
   background-size: cover;
 }
 
-.contactForm {
-  position: relative;
-  margin-top: -220px;
-}
-
-.contactForm form {
-  background-color: #262725;
-}
-
 .contactFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.headingContact {
+  position: relative;
+  margin-top: -220px;
+}
+
+.contactForm {
+  background-color: #262725;
+  width: 70%;
+}
+
+.contactForm input[type="name"], .contactForm input[type="email"] {
+  width: calc((100% / 2) - 5px);
 }
