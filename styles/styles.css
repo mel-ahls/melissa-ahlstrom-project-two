@@ -496,17 +496,12 @@ header.main {
   padding: 70px 0;
 }
 
-.gallery img {
-  width: calc( (100% / 3) - 20px);
-  margin: 10px;
-}
-
 .gallery img:first-child {
-  margin-left: 0;
+  padding-right: 20px;
 }
 
-.gallery img:first-child img:last-child {
-  margin-right: 0;
+.gallery img:last-child {
+  padding-left: 20px;
 }
 
 .position {
@@ -610,6 +605,12 @@ header.main {
   .headingMain {
     left: 6%;
   }
+  .headingMain h1 {
+    font-size: 60px;
+  }
+  .headingMain h1 span {
+    font-size: 90px;
+  }
   .info h2 {
     font-size: 4vw;
   }
@@ -618,6 +619,12 @@ header.main {
 @media (max-width: 965px) {
   .welcome {
     display: none;
+  }
+  .headingMain h1 {
+    font-size: 6vw;
+  }
+  .headingMain h1 span {
+    font-size: 9vw;
   }
   .adventure {
     -webkit-box-orient: vertical;
@@ -691,6 +698,21 @@ header.main {
   }
 }
 
+@media (max-width: 465px) {
+  .headingMain {
+    top: 15%;
+    line-height: 45px;
+  }
+  .gallery img:last-child {
+    display: none;
+  }
+  .info .icon {
+    left: -4px;
+    font-size: 20px;
+    padding: 6px;
+  }
+}
+
 input {
   background-color: transparent;
   border: none;
@@ -721,42 +743,6 @@ header.blogPost {
   background-position: top center;
   background-size: cover;
   position: relative;
-}
-
-aside {
-  background: #555F02;
-  width: 25%;
-  display: block;
-  float: right;
-  margin-top: 90px;
-  -webkit-box-shadow: -1px 29px 0px 14px #555F02;
-          box-shadow: -1px 29px 0px 14px #555F02;
-}
-
-aside h3 {
-  font-size: 20px;
-  font-family: "Dokdo", cursive;
-  color: #FAFFFE;
-  padding: 15px 0;
-}
-
-h3 ~ p {
-  font-size: 18px;
-}
-
-aside ul li {
-  font-family: "Lato", sans-serif;
-  color: #FAFFFE;
-  font-size: 18px;
-  letter-spacing: 2px;
-  list-style: none;
-  padding-bottom: 10px;
-}
-
-aside ul li::before {
-  content: "•";
-  color: #FFC600;
-  padding-right: 8px;
 }
 
 .heading {
@@ -822,6 +808,54 @@ aside ul li::before {
   padding-left: 120px;
 }
 
+.mission {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #555F02;
+  width: 25%;
+  display: block;
+  float: right;
+  margin-top: 90px;
+  -webkit-box-shadow: -1px 29px 0px 14px #555F02;
+          box-shadow: -1px 29px 0px 14px #555F02;
+}
+
+.mission h3 {
+  font-size: 20px;
+  font-family: "Dokdo", cursive;
+  color: #FAFFFE;
+  padding: 15px 0;
+}
+
+h3 ~ p {
+  font-size: 18px;
+}
+
+.mission h3, aside p {
+  padding-right: 10px;
+}
+
+.mission ul li {
+  font-family: "Lato", sans-serif;
+  color: #FAFFFE;
+  font-size: 18px;
+  letter-spacing: 2px;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.mission ul li::before {
+  content: "•";
+  color: #FFC600;
+  padding-right: 8px;
+}
+
+form.blogForm {
+  padding-bottom: 100px;
+}
+
 .blogForm input[type="name"], .blogForm input[type="email"] {
   width: calc( (55% / 2) - 10px);
   margin: 8px;
@@ -845,11 +879,52 @@ aside ul li::before {
   padding-left: 20px;
 }
 
+input#message {
+  padding: 0 0 135px 15px;
+}
+
 .blogForm input[type="submit"] {
   margin-top: 20px;
   font-size: 20px;
   width: 55%;
   height: 35px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 665px) {
+  .dsktp {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+  .heading ~ img {
+    width: 92%;
+  }
+  .mission {
+    text-align: center;
+  }
+  .mission h3 {
+    font-size: 30px;
+  }
+  .boxShadow, .davin, .lisa {
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .comments h2 {
+    padding-top: 25px;
+  }
+  .floatImg {
+    width: 28%;
+  }
+  .blogForm input[type="name"], .blogForm input[type="email"], .blogForm input[type="submit"], input#comment {
+    width: 100%;
+  }
 }
 
 header.contact {

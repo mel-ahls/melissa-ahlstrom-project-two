@@ -1,3 +1,4 @@
+// HEADER //
 header.blogPost {
    height: 52vh;
    width: 100vw;
@@ -5,41 +6,6 @@ header.blogPost {
    background-position: top center;
    background-size: cover;
    position: relative;
-}
-
-// ASIDE STYLES //
-aside {
-   background: $mudGreen;
-   width: 25%;
-   display: block;
-   float: right;
-   margin-top: 90px;
-   box-shadow: -1px 29px 0px 14px $mudGreen;
-   h3 {
-      font-size: 20px;
-      font-family: $secondaryFont;
-      color: $iceBlue;
-      padding: 15px 0;
-   }
-}
-
-h3 ~ p {
-   font-size: 18px;
-}
-
-aside ul li {
-   font-family: $primaryFont;
-   color: $iceBlue;
-   font-size: 18px;
-   letter-spacing: 2px;
-   list-style: none;
-   padding-bottom: 10px;
-}
-
-aside ul li::before {
-   content: "•"; 
-   color: $marigold;
-   padding-right: 8px;
 }
 
 // BLOG POST STYLES //
@@ -94,7 +60,51 @@ aside ul li::before {
    padding-left: 120px;
 }
 
+// SECTION STYLES //
+.mission {
+   flex-direction: column;
+   background: $mudGreen;
+   width: 25%;
+   display: block;
+   float: right;
+   margin-top: 90px;;
+   box-shadow: -1px 29px 0px 14px $mudGreen;
+   h3 {
+      font-size: 20px;
+      font-family: $secondaryFont;
+      color: $iceBlue;
+      padding: 15px 0;
+   }
+}
+
+h3 ~ p {
+   font-size: 18px;
+}
+
+.mission h3, aside p {
+   padding-right: 10px;
+}
+
+.mission ul li {
+   font-family: $primaryFont;
+   color: $iceBlue;
+   font-size: 18px;
+   letter-spacing: 2px;
+   list-style: none;
+   padding-bottom: 10px;
+}
+
+.mission ul li::before {
+   content: "•"; 
+   color: $marigold;
+   padding-right: 8px;
+}
+
 // BLOG FORM STYING //
+form.blogForm {
+   padding-bottom: 100px;
+}
+
 .blogForm input[type="name"], .blogForm input[type="email"] {
    width: calc( (55% / 2) - 10px);
    margin: 8px;
@@ -118,9 +128,62 @@ aside ul li::before {
    padding-left: 20px;
 }
 
+input#message {
+   padding: 0 0 135px 15px;
+}
+
 .blogForm input[type="submit"] {
    margin-top: 20px;
    font-size: 20px;
    width: 55%;
    height: 35px;
+}
+
+// MEDIA QUERY //
+.mobile{
+   display: none;
+}
+@media (max-width: 665px) {
+   .dsktp{
+   display: none;
+}
+   .mobile{
+      display: block;
+      width: 100%;;
+   }
+
+   .heading ~ img {
+      width: 92%;
+   }
+
+   .mission {
+      text-align: center;
+      h3 {
+         font-size: 30px;
+      }
+   }
+
+   .boxShadow, .davin, .lisa{
+      width: 100%;
+      box-shadow: none;
+   }
+
+   .comments h2 {
+      padding-top: 25px;
+   }
+
+   .floatImg {
+      width: 28%;
+   }
+   // .blogForm input[type="name"], .blogForm input[type="email"] {
+      
+   // }
+
+   .blogForm input[type="name"], .blogForm input[type="email"], .blogForm input[type="submit"], input#comment{
+      width: 100%;
+      // margin: 0;
+   }
+
+
+
 }

@@ -58,17 +58,14 @@ header.main {
 // SECTION TWO STYLES
 .gallery {
    padding: 70px 0;
-      img {
-         width: calc( (100% / 3) - 20px);
-         margin: 10px;
-   }
 }
 
 .gallery img:first-child {
-    margin-left: 0;
-      img:last-child {
-         margin-right: 0;
-    }
+    padding-right: 20px;
+}
+
+.gallery img:last-child {
+   padding-left: 20px;
 }
 
 // SECTION THREE STYLES
@@ -155,6 +152,12 @@ header.main {
 @media (max-width: 1125px) {
    .headingMain {
       left: 6%;
+      h1 {
+         font-size: 60px;
+         span {
+            font-size: 90px;
+         }
+      }
    }
 
    .info h2 {
@@ -169,7 +172,12 @@ header.main {
       display: none;
    }
 
-   
+   .headingMain h1 {
+         font-size: 6vw;
+         span {
+            font-size: 9vw;
+         }
+      }
 
    // SECTION ONE
    .adventure {
@@ -240,5 +248,25 @@ header.main {
          padding-bottom: 15px;;
       }
    }
+}
 
+
+@media (max-width: 465px) {
+   // HEADER //
+   .headingMain {
+      top: 15%;
+      line-height: 45px;
+   }
+
+   // SECTION TWO //
+   .gallery img:last-child {
+      display: none;
+   }
+
+   // SECTION THREE //
+   .info .icon {
+      left: -4px;
+      font-size: 20px;
+      padding: 6px;
+   }
 }
