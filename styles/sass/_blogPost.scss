@@ -12,7 +12,6 @@ header.blogPost {
 .heading {
    position: relative;
    margin-top: -198px;
-   z-index: 100;
 }
 
 .heading ~ img {
@@ -81,10 +80,6 @@ h3 ~ p {
    font-size: 18px;
 }
 
-.mission h3, aside p {
-   padding-right: 10px;
-}
-
 .mission ul li {
    font-family: $primaryFont;
    color: $iceBlue;
@@ -107,18 +102,9 @@ form.blogForm {
 
 .blogForm input[type="name"], .blogForm input[type="email"] {
    width: calc( (55% / 2) - 10px);
-   margin: 8px;
    padding-left: 20px;
    padding-bottom: 10px;
    margin-bottom: 20px;
-}
-
-.blogForm input[type="name"] {
-   margin-left: 0;
-}
-
-.blogForm input[type="email"] {
-   margin-right: 0;
 }
 
 .blogForm input[type="text"] {
@@ -128,7 +114,7 @@ form.blogForm {
    padding-left: 20px;
 }
 
-input#message {
+input[type="text"] {
    padding: 0 0 135px 15px;
 }
 
@@ -139,15 +125,17 @@ input#message {
    height: 35px;
 }
 
+.mobile {
+   display: none;
+}
+
 // MEDIA QUERY //
-.mobile{
-   display: none;
-}
 @media (max-width: 665px) {
-   .dsktp{
+   .dsktp {
    display: none;
-}
-   .mobile{
+   }
+
+   .mobile {
       display: block;
       width: 100%;;
    }
@@ -174,16 +162,11 @@ input#message {
 
    .floatImg {
       width: 28%;
+      padding: 10px;
    }
-   // .blogForm input[type="name"], .blogForm input[type="email"] {
-      
-   // }
 
-   .blogForm input[type="name"], .blogForm input[type="email"], .blogForm input[type="submit"], input#comment{
+   .blogForm input[type="name"], .blogForm input[type="email"], .blogForm input[type="submit"], input[type="text"] {
       width: 100%;
-      // margin: 0;
    }
-
-
 
 }
